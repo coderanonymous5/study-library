@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rahul's UPSC Library</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      overflow-x: hidden;
+      background: #0f172a;
+    }
+
+    /* 🔹 Background Image Blur */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('ak1.jpg') center center / cover no-repeat;
+      filter: blur(8px);
+      opacity: 0.15;
+      z-index: -1;
+    }
+
+    body {
+      text-align: center;
+      padding: 40px 20px;
+      color: white;
+    }
+
+    /* 🔹 Glowing Header */
+    .hero-header {
+      margin-bottom: 40px;
+    }
+
+    .hero-header h1 {
+      font-size: 48px;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow:
+        0 0 10px #3b82f6,
+        0 0 20px #2563eb,
+        0 0 30px #1d4ed8;
+      margin-bottom: 10px;
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+
+    .hero-header h2 {
+      font-size: 18px;
+      color: #94a3b8;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        text-shadow:
+          0 0 10px #3b82f6,
+          0 0 20px #2563eb,
+          0 0 30px #1d4ed8;
+      }
+      50% {
+        text-shadow:
+          0 0 5px #3b82f6,
+          0 0 15px #2563eb,
+          0 0 25px #1d4ed8;
+      }
+      100% {
+        text-shadow:
+          0 0 10px #3b82f6,
+          0 0 20px #2563eb,
+          0 0 30px #1d4ed8;
+      }
+    }
+
+    /* 🔹 Card Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 16px;
+      padding: 30px;
+      font-size: 18px;
+      font-weight: 600;
+      transition: 0.3s ease-in-out;
+      box-shadow: 0 0 0 transparent;
+      color: #e2e8f0;
+      text-decoration: none;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #38bdf8;
+      background-color: rgba(56, 189, 248, 0.1);
+      color: #ffffff;
+    }
+
+    .quote {
+      margin-top: 50px;
+      font-size: 16px;
+      color: #cbd5e1;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 Glowing Title -->
+  <div class="hero-header">
+    <h1>💻 Rahul's UPSC Library</h1>
+    <h2>Welcome to your personalized study dashboard</h2>
+  </div>
+
+  <!-- 🔹 Subject Grid -->
+  <div class="grid">
+    <a class="card" href="Quantitative_Aptitude/index.html">📘 Quantitative Aptitude</a>
+    <a class="card" href="Reasoning/">🧠 Reasoning</a>
+    <a class="card" href="English/">📗 English</a>
+    <a class="card" href="Current_Affairs/">📰 Current Affairs</a>
+    <a class="card" href="General_Awareness/">🌐 General Awareness</a>
+    <a class="card" href="Polity/">🏛️ Polity</a>
+    <a class="card" href="Geography/">🌍 Geography</a>
+    <a class="card" href="Economics/">💰 Economics</a>
+    <a class="card" href="History/">📜 History</a>
+    <a class="card" href="Miscellaneous/">🎯 Miscellaneous</a>
+    <a class="card" href="Quants_PDFs/">📂 Quants PDFs</a>
+    <a class="card" href="Reasoning_PDFs/">📂 Reasoning PDFs</a>
+    <a class="card" href="Current_Affairs_PDFs/">📂 Current Affairs PDFs</a>
+  </div>
+
+  <!-- 🔹 Quote -->
+  <p class="quote">“The future depends on what you do today.”<br>– Mahatma Gandhi</p>
+
+</body>
+</html>
