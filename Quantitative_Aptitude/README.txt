@@ -1,1 +1,0 @@
-📁 Add your Quantitative Aptitude files here.
