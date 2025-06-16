@@ -61,11 +61,11 @@
 
     .video-card span {
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.7);
       width: 100%;
-      padding: 8px;
+      padding: 10px;
       font-size: 14px;
       color: #e0f2fe;
       text-align: center;
@@ -97,22 +97,55 @@
     const videoIDs = [
       "bIzOnzeVttY", "r54lY2XNq6Q", "BKZenaJYBiQ", "yP21tRoT9gA", "0hRfx2csxkU",
       "HZIKy8VB07M", "E7At78DJdek", "2bnmyF3s0MM", "3QRIzXmaxy0", "tg0VN89bf1c",
-      "enKySEqOqx4", "shVfovu7VBM", "c_FOR6YP-mg", "i3qmNSasr6g", "v62Wo9Y-KvQ", // skip 32
+      "enKySEqOqx4", "shVfovu7VBM", "c_FOR6YP-mg", "i3qmNSasr6g", "v62Wo9Y-KvQ", // class 32 skipped
       "c7mEgdKMou0", "EpTltvCXMaY", "2GSvoQjY7Yg", "MnWY8BIBxBU", "isL5bjklRNI",
       "oLFBPbVD5S0", "IogRx69TbsM", "q4wWSYe1HCs", "stSttLGvqtA", "VJ0uJ4glciQ",
       "CKOWFszntt0", "APUaZ_eBkJs", "XM0BJUirSW4", "m17UEJyIZ84"
+    ];
+
+    const videoTopics = [
+      "Percentage Module I – Zero to Infinity",
+      "Percentage Module II – Zero to Infinity",
+      "Profit Loss Module I – Zero to Infinity",
+      "Profit Loss Module II – Zero to Infinity",
+      "Dishonest Shopkeeper – Zero to Infinity",
+      "Simple & Compound Interest Module I – Zero to Infinity",
+      "Simple & Compound Interest Module II – Zero to Infinity",
+      "Simple & Compound Interest Module III – Zero to Infinity",
+      "Time & Work Module I – Zero to Infinity",
+      "Time & Work Module II – Zero to Infinity",
+      "Time & Work Module III – Zero to Infinity",
+      "Time & Work Module IV – Zero to Infinity",
+      "Time, Speed & Distance (Basics) – Zero to Infinity",
+      "Time, Speed & Distance (Accidents, Clashes, Meeting) – Zero to Infinity",
+      // Class 32 skipped
+      "Time, Speed & Distance (Trains, Races) – Zero to Infinity Part 1",
+      "Time, Speed & Distance (Trains, Races) – Zero to Infinity Part 2",
+      "Boat & Stream Basics – Zero to Infinity Part 1",
+      "Boat & Stream Practice – Zero to Infinity Part 2",
+      "Fog, Escalator & Bullet Firing – Zero to Infinity",
+      "Permutations & Combinations [Module I] – Zero to Infinity",
+      "Permutations & Combinations [Module II] – Zero to Infinity",
+      "Permutations & Combinations [Module III] – Zero to Infinity",
+      "Permutations & Combinations [Module IV] – Zero to Infinity",
+      "Probability [Module I] – Zero to Infinity",
+      "Probability [Module II] – Zero to Infinity",
+      "Probability [Module III] – Zero to Infinity",
+      "Probability [Module IV] – Zero to Infinity",
+      "Mixtures [Module I] – Zero to Infinity",
+      "Mixtures [Module II] – Zero to Infinity"
     ];
 
     const grid = document.getElementById("videoGrid");
 
     let classNum = 18;
     videoIDs.forEach((id, index) => {
-      if (classNum === 32) classNum++; // skip class 32
+      if (classNum === 32) classNum++; // Skip class 32
       const div = document.createElement("div");
       div.className = "video-card";
       div.innerHTML = `
         <img src="https://img.youtube.com/vi/${id}/hqdefault.jpg" alt="Class ${classNum}">
-        <span>Class ${classNum}</span>
+        <span>Class ${classNum}: ${videoTopics[index]}</span>
       `;
       div.onclick = () => {
         div.innerHTML = `<iframe width="100%" height="160" src="https://www.youtube.com/embed/${id}?autoplay=1" frameborder="0" allowfullscreen></iframe>`;
